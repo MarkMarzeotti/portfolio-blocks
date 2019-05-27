@@ -1,0 +1,33 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+// .wp-block-portfolio-blurb {
+//     float: none;
+//     margin-bottom: 0;
+
+//     @include grid-media($medium-screen-up) {
+//         margin-bottom: 0;
+//     }
+
+//     .blurb-inner {
+//         overflow: hidden;
+
+//         .blurb-content {
+//             left: 0;
+//             margin: 0;
+//             padding: 0;
+//             width: 100%;
+
+//             @include grid-media($medium-screen-up) {
+//                 left: 0;
+//                 margin: 0;
+//                 padding: 0;
+//                 width: 100%;
+//             }
+//         }
+//     }
+// }

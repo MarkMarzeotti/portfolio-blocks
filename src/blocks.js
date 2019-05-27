@@ -9,4 +9,7 @@
  * Webpack is compiling as the input file.
  */
 
-import './block/block.js';
+import './hero/hero.js';
+import './blurb/blurb.js';
+import './buckets/buckets.js';
+import './buckets/bucket.js';

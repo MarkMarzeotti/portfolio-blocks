@@ -1,0 +1,31 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-portfolio-blurb {
+    padding: 30px 0;
+}
+
+.blurb {
+    margin-bottom: 80px;
+    width: 100%;
+
+    @media screen and ( min-width: $medium-screen ) {
+        margin-bottom: 140px;
+    }
+
+    &__content {
+        margin-bottom: 20px;
+        width: 100%;
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-of-type {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

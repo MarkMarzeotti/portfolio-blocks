@@ -5,9 +5,285 @@
  * that are used across the project.
 */
 
-// Colors.
-$black: rgb(41, 41, 41);
-$white: #f4f4f4;
-$gray: #dedede;
-$green: #bada55;
-$red: orangered;
+$font-primary: 'Tiemposheadline', serif;
+$font-secondary: 'Graphik', sans-serif;
+
+$color-black: #000;
+$color-white: #fff;
+$color-grey: #383838;
+$color-grey-medium: #5f5f5f;
+$color-grey-light: #eee;
+$color-grey-lightest: #f4f4f4;
+$color-blue: #0073aa;
+
+$shadow: 0px 0px 30px 2px rgba($color-grey, .15);
+$shadow-hover: 0px 0px 30px 2px rgba($color-grey, .25);
+
+$small-screen: 400px;
+$medium-screen: 750px;
+$large-screen: 1000px;
+
+.wp-block {
+    max-width: 100%;
+}
+
+hr {
+	border: 0;
+	border-bottom: 4px solid $color-grey;
+	display: block;
+	height: 0;
+	margin: 0 auto 30px 0;
+	width: 100px;
+
+    @media screen and ( min-width: $medium-screen ) {
+		margin-bottom: 40px;
+	}
+}
+
+.large-inner {
+	display: flex;
+	flex-flow: row wrap;
+    margin: 0 auto;
+    padding: 0 15px;
+	position: relative;
+    width: 100%;
+	z-index: 1;
+
+    @media screen and ( min-width: $medium-screen ) {
+        padding: 0 30px;
+    }
+}
+
+.medium-inner {
+	display: flex;
+	flex-flow: row wrap;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 15px;
+	position: relative;
+    width: 100%;
+	z-index: 1;
+
+    @media screen and ( min-width: $medium-screen ) {
+        padding: 0 30px;
+    }
+}
+
+.small-inner {
+	display: flex;
+	flex-flow: row wrap;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 15px;
+	position: relative;
+    width: 100%;
+	z-index: 1;
+
+    @media screen and ( min-width: $medium-screen ) {
+        padding: 0 30px;
+    }
+}
+
+// @import '../../node_modules/bourbon/core/bourbon';
+// @import '../../node_modules/bourbon-neat/core/neat';
+
+// @import '../../../../themes/marzeotti-portfolio/assets/scss/partials/base/variables';
+// @import '../../../../themes/marzeotti-portfolio/assets/scss/partials/base/mixins';
+// @import '../../../../themes/marzeotti-portfolio/assets/scss/partials/base/grid-settings';
+
+// @font-face {
+//     font-family: 'Tiemposheadline';
+//     src: url('../../../themes/marzeotti-portfolio/assets/fonts/TiemposHeadline-Regular.woff') format('woff');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Tiemposheadline';
+//     src: url('../../../themes/marzeotti-portfolio/assets/fonts/TiemposHeadline-Medium.woff') format('woff');
+//     font-weight: 500;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Tiemposheadline';
+//     src: url('../../../themes/marzeotti-portfolio/assets/fonts/TiemposHeadline-Bold.woff') format('woff');
+//     font-weight: 700;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Tiemposheadline';
+//     src: url('../../../themes/marzeotti-portfolio/assets/fonts/TiemposHeadline-Semibold.woff') format('woff');
+//     font-weight: 600;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Graphik';
+//     src: url('../../../themes/marzeotti-portfolio/assets/fonts/Graphik-Bold.ttf') format('truetype');
+//     font-weight: 700;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Graphik';
+//     src: url('../../../themes/marzeotti-portfolio/assets/fonts/Graphik-Medium.ttf') format('truetype');
+//     font-weight: 500;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Graphik';
+//     src: url('../../../themes/marzeotti-portfolio/assets/fonts/Graphik-Regular.ttf') format('truetype');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+
+// .edit-post-layout__content {
+
+//     hr {
+//         border: 0;
+//         border-bottom: 4px solid $color-grey;
+//         display: block;
+//         height: 0;
+//         margin: 0 auto 30px 0;
+//         width: 100px;
+
+//         @include grid-media($medium-screen-up) {
+//             margin-bottom: 40px;
+//         }
+//     }
+
+//     h1,
+//     h2,
+//     h3,
+//     h4,
+//     h5,
+//     h6 {
+//         color: $color-grey;
+//         margin-top: 0;
+//     }
+
+//     h1,
+//     .h1,
+//     h1 a,
+//     .h1 a {
+//         font-family: $font-primary;
+//         font-size: 36px;
+//         line-height: 1.3;
+//         margin-bottom: 30px;
+
+//         @include grid-media($medium-screen-up) {
+//             font-size: 48px;
+//         }
+//     }
+
+//     h2,
+//     .h2,
+//     h2 a,
+//     .h2 a {
+//         font-family: $font-primary;
+//         font-size: 30px;
+//         line-height: 1.4;
+//         margin-bottom: 20px;
+
+//         @include grid-media($medium-screen-up) {
+//             font-size: 36px;
+//             margin-bottom: 30px;
+//         }
+
+//         span {
+//             display: block;
+//         }
+//     }
+
+//     h3,
+//     .h3,
+//     h3 a,
+//     .h3 a {
+//         font-family: $font-primary;
+//         font-size: 20px;
+//         font-weight: 700;
+//         line-height: 1.4;
+//         margin-bottom: 16px;
+
+//         @include grid-media($medium-screen-up) {
+//             font-size: 30px;
+//             margin-bottom: 20px;
+//         }
+//     }
+
+//     h4,
+//     .h4,
+//     h4 a,
+//     .h4 a {
+//         font-family: $font-secondary;
+//         font-size: 18px;
+//         font-weight: 400;
+//         line-height: 1.4;
+//         margin-bottom: 12px;
+
+//         @include grid-media($medium-screen-up) {
+//             font-size: 24px;
+//             margin-bottom: 20px;
+//         }
+//     }
+
+//     h5,
+//     .h5,
+//     h5 a,
+//     .h5 a {
+//         font-family: $font-secondary;
+//         font-size: 21px;
+//         font-weight: 400;
+//         line-height: 28px;
+//         margin-bottom: 12px;
+//     }
+
+//     h6,
+//     .h6,
+//     h6 a,
+//     .h6 a {
+//         font-family: $font-secondary;
+//         font-size: 16px;
+//         font-weight: 400;
+//         line-height: 1.6;
+//         margin-bottom: 12px;
+//         text-transform: uppercase;
+//     }
+
+
+//     p,
+//     li {
+//         color: $color-grey-medium;
+//         font-family: $font-secondary;
+//         font-size: 16px;
+//         line-height: 1.8;
+//         margin-top: 0;
+
+//         @include grid-media($medium-screen-up) {
+//             font-size: 16px;
+//         }
+//     }
+
+//     a {
+//         color: $color-blue;
+//         transition: color 200ms ease;
+
+//         &:visited {
+//             color: darken($color-blue, 10%);
+//         }
+
+//         &:hover {
+//             color: lighten($color-blue, 10%);
+//         }
+//     }
+// }
+
+// @import '../../../../themes/marzeotti-portfolio/assets/scss/partials/base/buttons';
+
+// // .editor-post-title__block .editor-post-title__input {
+// //     color: $color-grey;
+// //     font-family: $font-primary;
+// // }

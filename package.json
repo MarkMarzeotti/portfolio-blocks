@@ -9,5 +9,9 @@
   },
   "dependencies": {
     "cgb-scripts": "1.17.0"
+  },
+  "devDependencies": {
+    "bourbon": "^5.1.0",
+    "bourbon-neat": "^3.0.1"
   }
 }

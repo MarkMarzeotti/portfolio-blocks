@@ -1,0 +1,40 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-portfolio-buckets {
+    padding: 30px 0;
+
+    .medium-inner {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
+
+.buckets {
+    margin-bottom: 80px;
+    width: 100%;
+
+    @media screen and ( min-width: $medium-screen ) {
+        margin-bottom: 140px;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        margin-right: 30px;
+    
+        &:last-child {
+            margin-right: 0;
+        }
+    
+        p {
+            margin-bottom: 20px;
+    
+            &:last-of-type {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
