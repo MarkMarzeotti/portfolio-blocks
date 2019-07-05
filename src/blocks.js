@@ -13,3 +13,4 @@ import './hero/hero.js';
 import './blurb/blurb.js';
 import './buckets/buckets.js';
 import './buckets/bucket.js';
+import './work/work.js';
