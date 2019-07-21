@@ -5,29 +5,20 @@
  * which makes it higher in priority.
  */
 
-// .wp-block-portfolio-blurb {
-//     float: none;
-//     margin-bottom: 0;
+ .wp-block-portfolio-blurb {
 
-//     @include grid-media($medium-screen-up) {
-//         margin-bottom: 0;
-//     }
-
-//     .blurb-inner {
-//         overflow: hidden;
-
-//         .blurb-content {
-//             left: 0;
-//             margin: 0;
-//             padding: 0;
-//             width: 100%;
-
-//             @include grid-media($medium-screen-up) {
-//                 left: 0;
-//                 margin: 0;
-//                 padding: 0;
-//                 width: 100%;
-//             }
-//         }
-//     }
-// }
+    .blurb-inner {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .background {
+        pointer-events: none;
+        position: absolute;
+        top: -14px;
+        right: -100vw;
+        bottom: -14px;
+        left: -100vw;
+        z-index: 0;
+    }
+}

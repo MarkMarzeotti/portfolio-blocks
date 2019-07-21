@@ -11,16 +11,14 @@ import './editor.scss';
 
 // const validAlignments = [ 'full' ];
 
-const { __ } = wp.i18n; // Import __() from wp.i18n
-const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
+const { __ } = wp.i18n;
+const { InspectorControls } = wp.editor;
+const { registerBlockType } = wp.blocks;
 const { InnerBlocks, RichText } = wp.editor;
+const { PanelBody, ColorPalette } = wp.components;
 
 /**
  * Register: aa Gutenberg Block.
- *
- * Registers a new block provided a unique name and an object defining its
- * behavior. Once registered, the block is made editor as an option to any
- * editor interface where blocks are implemented.
  *
  * @link https://wordpress.org/gutenberg/handbook/block-api/
  * @param  {string}   name     Block name.
@@ -29,10 +27,9 @@ const { InnerBlocks, RichText } = wp.editor;
  *                             registered; otherwise `undefined`.
  */
 registerBlockType( 'portfolio/blurb', {
-	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'Blurb' ), // Block title.
-	icon: 'align-none', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
-	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
+	title: __( 'Blurb' ),
+	icon: 'align-none',
+	category: 'common',
 	// supports: {
 	// 	align: validAlignments,
 	// },
@@ -45,6 +42,9 @@ registerBlockType( 'portfolio/blurb', {
 			source: 'children',
 			selector: 'h2',
 			type: 'array',
+		},
+		color: {
+			type: 'string',
 		},
 	},
 	keywords: [
@@ -62,26 +62,43 @@ registerBlockType( 'portfolio/blurb', {
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
 	edit: function( props ) {
-		function handleChangeHeading( newHeading ) {
-			props.setAttributes( { heading: newHeading } );
+		const colors = [
+			{ name: 'Transparent', color: 'transparent' },
+			{ name: 'Grey', color: '#f4f4f4' },
+		];
+
+		let background = '';
+
+		if ( props.attributes.color ) {
+			background = <div className="background" style={ { backgroundColor: props.attributes.color } }></div>;
 		}
 
-		return (
-			<div className={ props.className }>
+		return [
+			<InspectorControls key="1">
+				<PanelBody title={ __( 'Background Color' ) }>
+					<ColorPalette
+						colors={ colors }
+						value={ props.attributes.color }
+						onChange={ ( color ) => props.setAttributes( { color } ) }
+					/>
+				</PanelBody>
+			</InspectorControls>,
+			<div key="2" className={ props.className }>
+				{ background }
 				<div className="blurb-inner">
 					<div className="blurb__content">
 						<RichText
 							tagName="h2"
 							keepPlaceholderOnFocus={ true }
-							onChange={ handleChangeHeading }
+							onChange={ ( heading ) => props.setAttributes( { heading } ) }
 							placeholder={ __( 'Add a title for this block' ) }
 							value={ props.attributes.heading } />
 						<hr />
 						<InnerBlocks allowedBlocks={ [ 'core/paragraph', 'core/button', 'core/list' ] } />
 					</div>
 				</div>
-			</div>
-		);
+			</div>,
+		];
 	},
 
 	/*
@@ -94,7 +111,7 @@ registerBlockType( 'portfolio/blurb', {
 	 */
 	save: function( props ) {
 		return (
-			<div className={ props.className }>
+			<div className={ props.className } style={ { backgroundColor: props.attributes.color } }>
 				<div className="medium-inner">
 					<div className="blurb__content">
 						<RichText.Content tagName="h2" value={ props.attributes.heading } />

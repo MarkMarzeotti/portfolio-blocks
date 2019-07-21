@@ -11,8 +11,8 @@ import './editor.scss';
 
 // const validAlignments = [ 'full' ];
 
-const { __ } = wp.i18n; // Import __() from wp.i18n
-const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
+const { __ } = wp.i18n;
+const { registerBlockType } = wp.blocks;
 const { InnerBlocks, RichText } = wp.editor;
 
 const Rankings = <svg height="120" width="100%">
@@ -45,10 +45,9 @@ const Rankings = <svg height="120" width="100%">
  *                             registered; otherwise `undefined`.
  */
 registerBlockType( 'portfolio/hero', {
-	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'Hero' ), // Block title.
-	icon: 'chart-line', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
-	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
+	title: __( 'Hero' ),
+	icon: 'chart-line',
+	category: 'common',
 	// supports: {
 	// 	align: validAlignments,
 	// },

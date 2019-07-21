@@ -77,3 +77,18 @@ function portfolio_blocks_cgb_block_assets() { // phpcs:ignore
 
 // Hook: Block assets.
 add_action( 'init', 'portfolio_blocks_cgb_block_assets' );
+
+function intro_heading_format_script_register() {
+    wp_register_script(
+        'intro-heading-format-js',
+        plugins_url( 'blurb/intro-heading-format.js', __FILE__ ),
+        array( 'wp-rich-text', 'wp-element', 'wp-editor' )
+    );
+}
+add_action( 'init', 'intro_heading_format_script_register' );
+ 
+function intro_heading_format_enqueue_assets_editor() {
+    wp_enqueue_script( 'intro-heading-format-js' );
+}
+add_action( 'enqueue_block_editor_assets', 'intro_heading_format_enqueue_assets_editor' );
+

@@ -1,5 +1,5 @@
 /**
- * BLOCK: portfolio - buckets
+ * BLOCK: portfolio - map
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
@@ -9,13 +9,13 @@
 import './style.scss';
 import './editor.scss';
 
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+
 // const validAlignments = [ 'full' ];
 
 const { __ } = wp.i18n;
-const { InspectorControls } = wp.editor;
 const { registerBlockType } = wp.blocks;
-const { InnerBlocks } = wp.editor;
-const { PanelBody, ColorPalette } = wp.components;
+// const { RichText } = wp.editor;
 
 /**
  * Register: aa Gutenberg Block.
@@ -30,22 +30,18 @@ const { PanelBody, ColorPalette } = wp.components;
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'portfolio/buckets', {
-	title: __( 'Buckets' ),
-	icon: 'editor-table',
+registerBlockType( 'portfolio/map', {
+	title: __( 'Map' ),
+	icon: 'location',
 	category: 'common',
-	// supports: {
-	// 	align: validAlignments,
-	// },
 	attributes: {
-		// align: {
-		// 	type: 'string',
-		// 	default: 'full',
-		// },
+		address: {
+			type: 'string',
+		},
 	},
 	keywords: [
-		__( 'buckets' ),
-		__( 'content' ),
+		__( 'map' ),
+		__( 'google map' ),
 		__( 'portfolio' ),
 	],
 
@@ -58,31 +54,26 @@ registerBlockType( 'portfolio/buckets', {
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
 	edit: function( props ) {
-		const colors = [
-			{ name: 'Transparent', color: 'transparent' },
-			{ name: 'Grey', color: '#f4f4f4' },
-		];
+		const MyMapComponent = withScriptjs( withGoogleMap( () =>
+			<GoogleMap
+				defaultZoom={ 8 }
+				defaultCenter={ { lat: 35.239418, lng: -80.8455486 } }
+			>
+				{ props.isMarkerShown && <Marker position={ { lat: 35.239418, lng: -80.8455486 } } /> }
+			</GoogleMap>
+		) );
 
-		if ( props.attributes.color ) {
-			props.className = props.className + ' background-' + props.attributes.color;
-		}
-
-		return [
-			<InspectorControls key="1">
-				<PanelBody title={ __( 'Background Color' ) }>
-					<ColorPalette
-						colors={ colors }
-						value={ props.attributes.color }
-						onChange={ ( color ) => props.setAttributes( { color } ) }
-					/>
-				</PanelBody>
-			</InspectorControls>,
-			<div key="2" className={ props.className }>
-				<div className="buckets-inner">
-					<InnerBlocks allowedBlocks={ 'portfolio/bucket' } />
-				</div>
+		return (
+			<div className={ props.className }>
+				<MyMapComponent
+					isMarkerShown
+					googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+					loadingElement={ <div style={ { height: '100%' } } /> }
+					containerElement={ <div style={ { height: '400px' } } /> }
+					mapElement={ <div style={ { height: '100%' } } /> }
+				/>
 			</div>
-		];
+		);
 	},
 
 	/*
@@ -96,9 +87,7 @@ registerBlockType( 'portfolio/buckets', {
 	save: function( props ) {
 		return (
 			<div className={ props.className }>
-				<div className="medium-inner">
-					<InnerBlocks.Content />
-				</div>
+				<div className="map"></div>
 			</div>
 		);
 	},

@@ -1,5 +1,5 @@
 /**
- * BLOCK: portfolio - buckets
+ * BLOCK: portfolio - heading content
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
@@ -12,10 +12,8 @@ import './editor.scss';
 // const validAlignments = [ 'full' ];
 
 const { __ } = wp.i18n;
-const { InspectorControls } = wp.editor;
 const { registerBlockType } = wp.blocks;
-const { InnerBlocks } = wp.editor;
-const { PanelBody, ColorPalette } = wp.components;
+const { InnerBlocks, RichText } = wp.editor;
 
 /**
  * Register: aa Gutenberg Block.
@@ -30,9 +28,9 @@ const { PanelBody, ColorPalette } = wp.components;
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'portfolio/buckets', {
-	title: __( 'Buckets' ),
-	icon: 'editor-table',
+registerBlockType( 'portfolio/heading-content', {
+	title: __( 'Heading Content' ),
+	icon: 'align-none',
 	category: 'common',
 	// supports: {
 	// 	align: validAlignments,
@@ -42,9 +40,14 @@ registerBlockType( 'portfolio/buckets', {
 		// 	type: 'string',
 		// 	default: 'full',
 		// },
+		heading: {
+			source: 'children',
+			selector: 'h2',
+			type: 'array',
+		},
 	},
 	keywords: [
-		__( 'buckets' ),
+		__( 'heading' ),
 		__( 'content' ),
 		__( 'portfolio' ),
 	],
@@ -58,31 +61,27 @@ registerBlockType( 'portfolio/buckets', {
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
 	edit: function( props ) {
-		const colors = [
-			{ name: 'Transparent', color: 'transparent' },
-			{ name: 'Grey', color: '#f4f4f4' },
-		];
-
-		if ( props.attributes.color ) {
-			props.className = props.className + ' background-' + props.attributes.color;
+		function handleChangeHeading( newHeading ) {
+			props.setAttributes( { heading: newHeading } );
 		}
 
-		return [
-			<InspectorControls key="1">
-				<PanelBody title={ __( 'Background Color' ) }>
-					<ColorPalette
-						colors={ colors }
-						value={ props.attributes.color }
-						onChange={ ( color ) => props.setAttributes( { color } ) }
-					/>
-				</PanelBody>
-			</InspectorControls>,
-			<div key="2" className={ props.className }>
-				<div className="buckets-inner">
-					<InnerBlocks allowedBlocks={ 'portfolio/bucket' } />
+		return (
+			<div className={ props.className }>
+				<div className="medium-inner">
+					<div className="heading-content__heading">
+						<RichText
+							tagName="h2"
+							keepPlaceholderOnFocus={ true }
+							onChange={ handleChangeHeading }
+							placeholder={ __( 'Add a title for this block' ) }
+							value={ props.attributes.heading } />
+					</div>
+					<div className="heading-content__content">
+						<InnerBlocks allowedBlocks={ [ 'core/paragraph', 'core/button', 'core/list' ] } />
+					</div>
 				</div>
 			</div>
-		];
+		);
 	},
 
 	/*
@@ -96,8 +95,13 @@ registerBlockType( 'portfolio/buckets', {
 	save: function( props ) {
 		return (
 			<div className={ props.className }>
-				<div className="medium-inner">
-					<InnerBlocks.Content />
+				<div className="heading-content-inner">
+					<div className="heading-content__heading">
+						<RichText.Content tagName="h2" value={ props.attributes.heading } />
+					</div>
+					<div className="heading-content__content">
+						<InnerBlocks.Content />
+					</div>
 				</div>
 			</div>
 		);

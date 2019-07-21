@@ -14,3 +14,5 @@ import './blurb/blurb.js';
 import './buckets/buckets.js';
 import './buckets/bucket.js';
 import './work/work.js';
+import './map/map.js';
+import './heading-content/heading-content.js';
