@@ -30,27 +30,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 function portfolio_blocks_cgb_block_assets() { // phpcs:ignore
 	// Register block styles for both frontend + backend.
 	wp_register_style(
-		'portfolio_blocks-cgb-style-css', // Handle.
-		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ), // Block style CSS.
-		array( 'wp-editor' ), // Dependency to include the CSS after it.
-		null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' ) // Version: File modification time.
+		'portfolio_blocks-cgb-style-css',
+		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ),
+		array( 'wp-editor' ),
+		null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' )
 	);
 
 	// Register block editor script for backend.
 	wp_register_script(
-		'portfolio_blocks-cgb-block-js', // Handle.
-		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ), // Block.build.js: We register the block here. Built with Webpack.
-		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ), // Dependencies, defined above.
-		null, // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: filemtime — Gets file modification time.
-		true // Enqueue the script in the footer.
+		'portfolio_blocks-cgb-block-js',
+		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ),
+		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ),
+		null, // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ),
+		true
 	);
 
 	// Register block editor styles for backend.
 	wp_register_style(
-		'portfolio_blocks-cgb-block-editor-css', // Handle.
-		plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ), // Block editor CSS.
-		array( 'wp-edit-blocks' ), // Dependency to include the CSS after it.
-		null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.editor.build.css' ) // Version: File modification time.
+		'portfolio_blocks-cgb-block-editor-css',
+		plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ),
+		array( 'wp-edit-blocks' ),
+		null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.editor.build.css' )
 	);
 
 	/**
@@ -74,10 +74,11 @@ function portfolio_blocks_cgb_block_assets() { // phpcs:ignore
 		)
 	);
 }
-
-// Hook: Block assets.
 add_action( 'init', 'portfolio_blocks_cgb_block_assets' );
 
+/**
+ * Register editor script to create a toolbar item.
+ */
 function intro_heading_format_script_register() {
     wp_register_script(
         'intro-heading-format-js',
@@ -86,9 +87,39 @@ function intro_heading_format_script_register() {
     );
 }
 add_action( 'init', 'intro_heading_format_script_register' );
- 
+
+/**
+ * Enqueue editor script to create a toolbar item.
+ */
 function intro_heading_format_enqueue_assets_editor() {
     wp_enqueue_script( 'intro-heading-format-js' );
 }
 add_action( 'enqueue_block_editor_assets', 'intro_heading_format_enqueue_assets_editor' );
 
+/**
+ * Enqueue Gutenberg block assets for frontend.
+ *
+ * Assets enqueued:
+ * 1. Google Maps.
+ * 
+ * @since 1.0.0
+ */
+function portfolio_block_frontend_assets() {
+	wp_register_script(
+		'google-maps',
+		'https://maps.googleapis.com/maps/api/js?key=AIzaSyCb0NahCEnubhm0zEaBcJKF4nPgrSZ3IQM&callback=initMap',
+		array( 'google-maps-loader' ),
+		null,
+		true
+	);
+	wp_register_script(
+		'google-maps-loader',
+		plugins_url( 'src/map/common.js', dirname( __FILE__ ) ),
+		array(),
+		null,
+		true
+	);
+	wp_enqueue_script( 'google-maps-loader' );
+	wp_enqueue_script( 'google-maps' );
+}
+add_action( 'wp_enqueue_scripts', 'portfolio_block_frontend_assets' );

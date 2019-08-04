@@ -5,35 +5,11 @@
  * that are used across the project.
 */
 
-.wp-block {
-    max-width: 100%;
-}
+// .block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before {
+//     z-index: 1;
+// }
 
-.small-inner,
-.medium-inner,
-.large-inner {
-	display: flex;
-	flex-flow: row wrap;
-    margin: 0 auto;
-    padding: 0 30px;
-	position: relative;
-    width: 100%;
-	z-index: 1;
-}
-
-.small-inner {
-    max-width: 800px;
-}
-
-.medium-inner {
-    max-width: 1000px;
-}
-
-.block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before {
-    z-index: 1;
-}
-
-div[data-block] {
-    position: relative;
-    z-index: 0;
-}
+// div[data-block] {
+//     position: relative;
+//     z-index: 0;
+// }

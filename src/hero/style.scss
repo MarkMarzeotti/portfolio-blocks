@@ -4,26 +4,35 @@
  * CSS for both Frontend+Backend.
  */
 
-.hero {
-	align-items: center;
-	display: flex;
-	flex-flow: row wrap;
-	height: calc(100vh - 200px);
-	min-height: 400px;
-	position: relative;
-	width: 100%;
-	z-index: 1;
+.wp-block-portfolio-hero {
 
+	.hero {
+		align-items: center;
+		display: flex;
+		flex-flow: row wrap;
+		position: relative;
+		width: 100%;
+		z-index: 1;
+		
+		@media (min-width: 750px) {
+			height: calc(100vh - 200px);
+			min-height: 400px;
+		}
 
-	p {
+		.hero__content {
+			padding: 40px 0;
 
-		&:last-of-type {
-			margin-bottom: 50px;
+			p {
+		
+				&:last-of-type {
+					margin-bottom: 50px;
+				}
+			}
 		}
 	}
-}
 
-.ranking {
-	height: 120px;
-	width: 100%;
+	.ranking {
+		height: 120px;
+		width: 100%;
+	}
 }

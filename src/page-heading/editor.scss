@@ -1,0 +1,17 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-portfolio-page-heading {
+
+    .editor-rich-text {
+
+        h1 {
+			font-size: 70px;
+            margin: -100px 0 0;
+        }
+    }
+}

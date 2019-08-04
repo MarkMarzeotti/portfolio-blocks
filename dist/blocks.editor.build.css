@@ -4,46 +4,17 @@
  * Can include things like variables and mixins
  * that are used across the project.
 */
-.wp-block {
-  max-width: 100%; }
-
-.small-inner,
-.medium-inner,
-.large-inner {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  margin: 0 auto;
-  padding: 0 30px;
-  position: relative;
-  width: 100%;
-  z-index: 1; }
-
-.small-inner {
-  max-width: 800px; }
-
-.medium-inner {
-  max-width: 1000px; }
-
-.block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before {
-  z-index: 1; }
-
-div[data-block] {
-  position: relative;
-  z-index: 0; }
-
 /**
  * #.# Editor Styles
  *
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.hero {
+.wp-block-portfolio-hero .hero {
   height: auto;
   min-height: auto; }
 
-.ranking {
+.wp-block-portfolio-hero .ranking {
   margin-bottom: 0; }
 /**
  * #.# Common SCSS
@@ -51,45 +22,12 @@ div[data-block] {
  * Can include things like variables and mixins
  * that are used across the project.
 */
-.wp-block {
-  max-width: 100%; }
-
-.small-inner,
-.medium-inner,
-.large-inner {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  margin: 0 auto;
-  padding: 0 30px;
-  position: relative;
-  width: 100%;
-  z-index: 1; }
-
-.small-inner {
-  max-width: 800px; }
-
-.medium-inner {
-  max-width: 1000px; }
-
-.block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before {
-  z-index: 1; }
-
-div[data-block] {
-  position: relative;
-  z-index: 0; }
-
 /**
  * #.# Editor Styles
  *
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-portfolio-blurb .blurb-inner {
-  position: relative;
-  z-index: 1; }
-
 .wp-block-portfolio-blurb .background {
   pointer-events: none;
   position: absolute;
@@ -104,100 +42,12 @@ div[data-block] {
  * Can include things like variables and mixins
  * that are used across the project.
 */
-.wp-block {
-  max-width: 100%; }
-
-.small-inner,
-.medium-inner,
-.large-inner {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  margin: 0 auto;
-  padding: 0 30px;
-  position: relative;
-  width: 100%;
-  z-index: 1; }
-
-.small-inner {
-  max-width: 800px; }
-
-.medium-inner {
-  max-width: 1000px; }
-
-.block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before {
-  z-index: 1; }
-
-div[data-block] {
-  position: relative;
-  z-index: 0; }
-
 /**
  * #.# Editor Styles
  *
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.buckets__item {
-  width: 100%; }
-
-.buckets-inner > .editor-inner-blocks.block-editor-inner-blocks > .editor-block-list__layout.block-editor-block-list__layout {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap; }
-  .buckets-inner > .editor-inner-blocks.block-editor-inner-blocks > .editor-block-list__layout.block-editor-block-list__layout > div {
-    width: auto; }
-/**
- * #.# Common SCSS
- *
- * Can include things like variables and mixins
- * that are used across the project.
-*/
-.wp-block {
-  max-width: 100%; }
-
-.small-inner,
-.medium-inner,
-.large-inner {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  margin: 0 auto;
-  padding: 0 30px;
-  position: relative;
-  width: 100%;
-  z-index: 1; }
-
-.small-inner {
-  max-width: 800px; }
-
-.medium-inner {
-  max-width: 1000px; }
-
-.block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before {
-  z-index: 1; }
-
-div[data-block] {
-  position: relative;
-  z-index: 0; }
-
-/**
- * #.# Editor Styles
- *
- * CSS for just Backend enqueued after style.scss
- * which makes it higher in priority.
- */
-.wp-block-portfolio-work .work-inner {
-  -ms-flex-align: center;
-      align-items: center;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap; }
-
 .wp-block-portfolio-work .work__image {
   margin-top: 40px; }
   .wp-block-portfolio-work .work__image .components-button {
@@ -206,7 +56,7 @@ div[data-block] {
     right: 0;
     left: 6%;
     margin: auto; }
-  .wp-block-portfolio-work .work__image .work-container {
+  .wp-block-portfolio-work .work__image__screenshot {
     background-color: #F3F3F4; }
 /**
  * #.# Common SCSS
@@ -214,35 +64,6 @@ div[data-block] {
  * Can include things like variables and mixins
  * that are used across the project.
 */
-.wp-block {
-  max-width: 100%; }
-
-.small-inner,
-.medium-inner,
-.large-inner {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  margin: 0 auto;
-  padding: 0 30px;
-  position: relative;
-  width: 100%;
-  z-index: 1; }
-
-.small-inner {
-  max-width: 800px; }
-
-.medium-inner {
-  max-width: 1000px; }
-
-.block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before {
-  z-index: 1; }
-
-div[data-block] {
-  position: relative;
-  z-index: 0; }
-
 /**
  * #.# Editor Styles
  *
@@ -255,38 +76,12 @@ div[data-block] {
  * Can include things like variables and mixins
  * that are used across the project.
 */
-.wp-block {
-  max-width: 100%; }
-
-.small-inner,
-.medium-inner,
-.large-inner {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  margin: 0 auto;
-  padding: 0 30px;
-  position: relative;
-  width: 100%;
-  z-index: 1; }
-
-.small-inner {
-  max-width: 800px; }
-
-.medium-inner {
-  max-width: 1000px; }
-
-.block-editor-block-list__layout .block-editor-block-list__block .block-editor-block-list__block-edit:before {
-  z-index: 1; }
-
-div[data-block] {
-  position: relative;
-  z-index: 0; }
-
 /**
  * #.# Editor Styles
  *
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
+.wp-block-portfolio-page-heading .editor-rich-text h1 {
+  font-size: 70px;
+  margin: -100px 0 0; }

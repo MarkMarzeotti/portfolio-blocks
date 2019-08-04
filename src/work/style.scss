@@ -5,27 +5,22 @@
  */
 
 .wp-block-portfolio-work {
-    padding: 30px 0;
 
-    .medium-inner {
-        align-items: center;
-        display: flex;
-        flex-flow: row wrap;
-    }
-}
-
-.work {
-
-    &__content {
-        margin-right: 30px;
-        width: calc(50% - 15px);
-    }
-
-    &__image {
-        width: calc(50% - 15px);
-        position: relative;
-
-        .work-container {
+    .work {
+    
+        &__content {
+            margin-right: 30px;
+            padding-top: 30px;
+            width: calc(50% - 15px);
+        }
+    
+        &__image {
+            margin-bottom: -240px;
+            position: relative;
+            width: calc(50% - 15px);
+        }
+    
+        &__screenshot {
             mask: url(/wp-content/plugins/portfolio-blocks/src/work/assets/iphone-screen.svg);
             mask-size: 100% 100%;
             position: absolute;

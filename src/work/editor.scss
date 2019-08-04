@@ -7,25 +7,22 @@
 
 .wp-block-portfolio-work {
 
-    .work-inner {
-        align-items: center;
-        display: flex;
-        flex-flow: row wrap;
-    }
+    .work {
 
-    .work__image {
-        margin-top: 40px;
+        &__image {
+            margin-top: 40px;
 
-        .components-button {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            left: 6%;
-            margin: auto;
-        }
+            .components-button {
+                position: absolute;
+                top: -40px;
+                right: 0;
+                left: 6%;
+                margin: auto;
+            }
 
-        .work-container {
-            background-color: #F3F3F4;
+            &__screenshot {
+                background-color: #F3F3F4;
+            }
         }
     }
 }

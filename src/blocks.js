@@ -9,10 +9,9 @@
  * Webpack is compiling as the input file.
  */
 
-import './hero/hero.js';
-import './blurb/blurb.js';
-import './buckets/buckets.js';
-import './buckets/bucket.js';
-import './work/work.js';
-import './map/map.js';
-import './heading-content/heading-content.js';
+import './hero/block.js';
+import './blurb/block.js';
+import './work/block.js';
+import './map/block.js';
+// import './testimonial/block.js';
+import './page-heading/block.js';

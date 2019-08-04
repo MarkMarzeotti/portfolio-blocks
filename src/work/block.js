@@ -1,12 +1,10 @@
 /**
- * BLOCK: portfolio - work
+ * BLOCK: Work
  */
 
 //  Import CSS.
 import './style.scss';
 import './editor.scss';
-
-// const { iPhone } = './iphone';
 
 const iPhone = `<svg version="1.1" viewBox="0 0 1411 2664" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
@@ -42,7 +40,7 @@ const { IconButton } = wp.components;
 const ALLOWED_MEDIA_TYPES = [ 'image' ];
 
 /**
- * Register: a Gutenberg Block.
+ * Register: Work Gutenberg Block.
  *
  * @link https://wordpress.org/gutenberg/handbook/block-api/
  * @param  {string}   name     Block name.
@@ -82,13 +80,13 @@ registerBlockType( 'portfolio/work', {
 
 		return (
 			<section className={ props.className }>
-				<div className="work-inner">
+				<div className="work">
 					<div className="work__content">
 						<InnerBlocks allowedBlocks={ [ 'core/heading', 'core/paragraph', 'core/button', 'core/list' ] } />
 					</div>
 					<div className="work__image">
 						<div className="work__iphone" dangerouslySetInnerHTML={ { __html: iPhone } } />
-						<div className="work-container">
+						<div className="work__screenshot">
 							{ screenshot }
 						</div>
 						<MediaUpload
@@ -118,13 +116,13 @@ registerBlockType( 'portfolio/work', {
 	save: function( props ) {
 		return (
 			<section className={ props.className }>
-				<div className="medium-inner">
+				<div className="work">
 					<div className="work__content">
 						<InnerBlocks.Content />
 					</div>
 					<div className="work__image">
 						<div className="work__iphone" dangerouslySetInnerHTML={ { __html: iPhone } } />
-						<div className="work-container">
+						<div className="work__screenshot">
 							<img src={ props.attributes.screenshot } alt={ props.attributes.screenshotAlt } />
 						</div>
 					</div>

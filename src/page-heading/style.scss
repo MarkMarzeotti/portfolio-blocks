@@ -1,0 +1,31 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-portfolio-page-heading {
+
+	.page-heading {
+	
+		&__content {
+			text-align: center;
+			width: 100%;
+	
+			span {
+				font-size: 160px;
+				font-weight: 700;
+				line-height: 1.4;
+				margin: 0;
+				opacity: .1;
+				pointer-events: none;
+			}
+	
+			h1 {
+				font-size: 70px;
+				line-height: 1.4;
+				margin: -120px 0 0;
+			}
+		}
+	}
+}

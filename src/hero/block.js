@@ -1,15 +1,10 @@
 /**
- * BLOCK: portfolio - blurb
- *
- * Registering a basic block with Gutenberg.
- * Simple block, renders and saves the same content without any interactivity.
+ * BLOCK: Hero
  */
 
 //  Import CSS.
 import './style.scss';
 import './editor.scss';
-
-// const validAlignments = [ 'full' ];
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
@@ -32,11 +27,7 @@ const Rankings = <svg height="120" width="100%">
 </svg>;
 
 /**
- * Register: aa Gutenberg Block.
- *
- * Registers a new block provided a unique name and an object defining its
- * behavior. Once registered, the block is made editor as an option to any
- * editor interface where blocks are implemented.
+ * Register: Hero Gutenberg Block.
  *
  * @link https://wordpress.org/gutenberg/handbook/block-api/
  * @param  {string}   name     Block name.
@@ -48,14 +39,7 @@ registerBlockType( 'portfolio/hero', {
 	title: __( 'Hero' ),
 	icon: 'chart-line',
 	category: 'common',
-	// supports: {
-	// 	align: validAlignments,
-	// },
 	attributes: {
-		// align: {
-		// 	type: 'string',
-		// 	default: 'full',
-		// },
 		heading: {
 			source: 'children',
 			selector: 'h1',
@@ -72,36 +56,25 @@ registerBlockType( 'portfolio/hero', {
 		__( 'content' ),
 		__( 'portfolio' ),
 	],
-
-	/*
-	 * The edit function describes the structure of your block in the context of the editor.
-	 * This represents what the editor will render when the block is used.
-	 *
-	 * The "edit" property must be a valid function.
-	 *
-	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
-	 */
 	edit: function( props ) {
 		return (
 			<div className={ props.className }>
 				<div className="hero">
-					<div className="hero-inner">
-						<div className="hero-content">
-							<RichText
-								tagName="h1"
-								keepPlaceholderOnFocus={ true }
-								onChange={ ( newHeading ) => props.setAttributes( { heading: newHeading } ) }
-								placeholder={ __( 'Add a heading for this block' ) }
-								value={ props.attributes.heading } />
-							<RichText
-								tagName="p"
-								className="h4"
-								keepPlaceholderOnFocus={ true }
-								onChange={ ( newSubhead ) => props.setAttributes( { subhead: newSubhead } ) }
-								placeholder={ __( 'Add a subhead for this block' ) }
-								value={ props.attributes.subhead } />
-							<InnerBlocks allowedBlocks={ 'core/button' } />
-						</div>
+					<div className="hero__content">
+						<RichText
+							tagName="h1"
+							keepPlaceholderOnFocus={ true }
+							onChange={ ( newHeading ) => props.setAttributes( { heading: newHeading } ) }
+							placeholder={ __( 'Add a heading for this block' ) }
+							value={ props.attributes.heading } />
+						<RichText
+							tagName="p"
+							className="h4"
+							keepPlaceholderOnFocus={ true }
+							onChange={ ( newSubhead ) => props.setAttributes( { subhead: newSubhead } ) }
+							placeholder={ __( 'Add a subhead for this block' ) }
+							value={ props.attributes.subhead } />
+						<InnerBlocks allowedBlocks={ 'core/button' } />
 					</div>
 				</div>
 				<div className="ranking">
@@ -110,25 +83,14 @@ registerBlockType( 'portfolio/hero', {
 			</div>
 		);
 	},
-
-	/*
-	 * The save function defines the way in which the different attributes should be combined
-	 * into the final markup, which is then serialized by Gutenberg into post_content.
-	 *
-	 * The "save" property must be specified and must be a valid function.
-	 *
-	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
-	 */
 	save: function( props ) {
 		return (
 			<div className={ props.className }>
 				<div className="hero">
-					<div className="medium-inner">
-						<div className="hero-content">
-							<RichText.Content tagName="h1" value={ props.attributes.heading } />
-							<RichText.Content tagName="p" className="h4" value={ props.attributes.subhead } />
-							<InnerBlocks.Content />
-						</div>
+					<div className="hero__content">
+						<RichText.Content tagName="h1" value={ props.attributes.heading } />
+						<RichText.Content tagName="p" className="h4" value={ props.attributes.subhead } />
+						<InnerBlocks.Content />
 					</div>
 				</div>
 				<div className="ranking">

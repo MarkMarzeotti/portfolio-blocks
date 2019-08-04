@@ -5,11 +5,14 @@
  * which makes it higher in priority.
  */
 
-.hero {
-    height: auto;
-    min-height: auto;
-}
+.wp-block-portfolio-hero {
 
-.ranking {
-	margin-bottom: 0;
+    .hero {
+        height: auto;
+        min-height: auto;
+    }
+
+    .ranking {
+        margin-bottom: 0;
+    }
 }
