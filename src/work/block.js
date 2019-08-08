@@ -79,7 +79,7 @@ registerBlockType( 'portfolio/work', {
 		}
 
 		return (
-			<section className={ props.className }>
+			<div className={ props.className }>
 				<div className="work">
 					<div className="work__content">
 						<InnerBlocks allowedBlocks={ [ 'core/heading', 'core/paragraph', 'core/button', 'core/list' ] } />
@@ -110,12 +110,12 @@ registerBlockType( 'portfolio/work', {
 						/>
 					</div>
 				</div>
-			</section>
+			</div>
 		);
 	},
 	save: function( props ) {
 		return (
-			<section className={ props.className }>
+			<div className={ props.className }>
 				<div className="work">
 					<div className="work__content">
 						<InnerBlocks.Content />
@@ -127,7 +127,7 @@ registerBlockType( 'portfolio/work', {
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		);
 	},
 } );

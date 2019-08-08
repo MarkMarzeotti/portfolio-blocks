@@ -7,6 +7,9 @@
 .wp-block-portfolio-work {
 
     .work {
+        align-items: flex-start;
+        display: flex;
+        flex-flow: row wrap;
     
         &__content {
             margin-right: 30px;
@@ -29,6 +32,10 @@
             right: 11.86%;
             bottom: 5.45%;
             overflow: auto;
+
+            img {
+                width: 100%;
+            }
         }
     }
 }

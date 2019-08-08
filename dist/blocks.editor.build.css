@@ -49,6 +49,7 @@
  * which makes it higher in priority.
  */
 .wp-block-portfolio-work .work__image {
+  margin-bottom: 0;
   margin-top: 40px; }
   .wp-block-portfolio-work .work__image .components-button {
     position: absolute;

@@ -26,7 +26,22 @@
                     margin-bottom: 50px;
     
                     &:last-child {
-                        margin-bottom: 20px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            blockquote {
+
+                p {
+                    margin-bottom: 30px;
+        
+                    &:last-of-type {
+                        margin-bottom: 30px;
+        
+                        &:last-child {
+                            margin-bottom: 30px;
+                        }
                     }
                 }
             }
