@@ -45,11 +45,6 @@ registerBlockType( 'portfolio/hero', {
 			selector: 'h1',
 			type: 'array',
 		},
-		subhead: {
-			source: 'children',
-			selector: 'p',
-			type: 'array',
-		},
 	},
 	keywords: [
 		__( 'hero' ),
@@ -64,16 +59,9 @@ registerBlockType( 'portfolio/hero', {
 						<RichText
 							tagName="h1"
 							keepPlaceholderOnFocus={ true }
-							onChange={ ( newHeading ) => props.setAttributes( { heading: newHeading } ) }
+							onChange={ ( heading ) => props.setAttributes( { heading } ) }
 							placeholder={ __( 'Add a heading for this block' ) }
 							value={ props.attributes.heading } />
-						<RichText
-							tagName="p"
-							className="h4"
-							keepPlaceholderOnFocus={ true }
-							onChange={ ( newSubhead ) => props.setAttributes( { subhead: newSubhead } ) }
-							placeholder={ __( 'Add a subhead for this block' ) }
-							value={ props.attributes.subhead } />
 						<InnerBlocks allowedBlocks={ 'core/button' } />
 					</div>
 				</div>
@@ -89,7 +77,6 @@ registerBlockType( 'portfolio/hero', {
 				<div className="hero">
 					<div className="hero__content">
 						<RichText.Content tagName="h1" value={ props.attributes.heading } />
-						<RichText.Content tagName="p" className="h4" value={ props.attributes.subhead } />
 						<InnerBlocks.Content />
 					</div>
 				</div>
