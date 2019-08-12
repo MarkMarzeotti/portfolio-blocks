@@ -1,0 +1,17 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-archive-content-archive-content {
+    margin: 0;
+}
+
+.archive-content {
+
+    &__select-post-type {
+        opacity: .62;
+    }
+}

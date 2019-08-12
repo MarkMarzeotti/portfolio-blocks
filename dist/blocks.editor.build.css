@@ -10,12 +10,11 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-portfolio-hero .hero {
-  height: auto;
-  min-height: auto; }
+.wp-block-archive-content-archive-content {
+  margin: 0; }
 
-.wp-block-portfolio-hero .ranking {
-  margin-bottom: 0; }
+.archive-content__select-post-type {
+  opacity: .62; }
 /**
  * #.# Common SCSS
  *
@@ -48,17 +47,29 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-portfolio-work .work__image {
-  margin-bottom: 0;
-  margin-top: 40px; }
-  .wp-block-portfolio-work .work__image .components-button {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    left: 6%;
-    margin: auto; }
-  .wp-block-portfolio-work .work__image__screenshot {
-    background-color: #F3F3F4; }
+.wp-block-child-list-child-list {
+  margin: 0; }
+
+.child-list__select-post-type {
+  opacity: .62; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-portfolio-hero .hero {
+  height: auto;
+  min-height: auto; }
+
+.wp-block-portfolio-hero .ranking {
+  margin-bottom: 0; }
 /**
  * #.# Common SCSS
  *
@@ -86,3 +97,26 @@
 .wp-block-portfolio-page-heading .editor-rich-text h1 {
   font-size: 70px;
   margin: -100px 0 0; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-portfolio-work .work__image {
+  margin-bottom: 0;
+  margin-top: 40px; }
+  .wp-block-portfolio-work .work__image .components-button {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    left: 6%;
+    margin: auto; }
+  .wp-block-portfolio-work .work__image__screenshot {
+    background-color: #F3F3F4; }

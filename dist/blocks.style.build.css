@@ -9,28 +9,8 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-portfolio-hero .hero {
-  -ms-flex-align: center;
-      align-items: center;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  position: relative;
-  width: 100%;
-  z-index: 1; }
-  @media (min-width: 750px) {
-    .wp-block-portfolio-hero .hero {
-      height: calc(100vh - 200px);
-      min-height: 400px; } }
-  .wp-block-portfolio-hero .hero .hero__content {
-    padding: 40px 0; }
-    .wp-block-portfolio-hero .hero .hero__content p:last-of-type {
-      margin-bottom: 50px; }
-
-.wp-block-portfolio-hero .ranking {
-  height: 120px;
-  width: 100%; }
+.wp-block-archive-content-archive-content {
+  margin: 0 auto; }
 /**
  * #.# Common SCSS
  *
@@ -70,34 +50,41 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-portfolio-work .work {
-  -ms-flex-align: start;
-      align-items: flex-start;
+.wp-block-child-list-child-list {
+  margin: 0 auto; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-portfolio-hero .hero {
+  -ms-flex-align: center;
+      align-items: center;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
-      flex-flow: row wrap; }
-  .wp-block-portfolio-work .work__content {
-    margin-right: 30px;
-    padding-top: 30px;
-    width: calc(50% - 15px); }
-  .wp-block-portfolio-work .work__image {
-    margin-bottom: -240px;
-    position: relative;
-    width: calc(50% - 15px); }
-  .wp-block-portfolio-work .work__screenshot {
-    -webkit-mask: url(/wp-content/plugins/portfolio-blocks/src/work/assets/iphone-screen.svg);
-            mask: url(/wp-content/plugins/portfolio-blocks/src/work/assets/iphone-screen.svg);
-    -webkit-mask-size: 100% 100%;
-            mask-size: 100% 100%;
-    position: absolute;
-    top: 5%;
-    left: 11.44%;
-    right: 11.44%;
-    bottom: 8.3%;
-    overflow: auto; }
-    .wp-block-portfolio-work .work__screenshot img {
-      width: 100%; }
+      flex-flow: row wrap;
+  position: relative;
+  width: 100%;
+  z-index: 1; }
+  @media (min-width: 750px) {
+    .wp-block-portfolio-hero .hero {
+      height: calc(100vh - 200px);
+      min-height: 400px; } }
+  .wp-block-portfolio-hero .hero .hero__content {
+    padding: 40px 0; }
+    .wp-block-portfolio-hero .hero .hero__content p:last-of-type {
+      margin-bottom: 50px; }
+
+.wp-block-portfolio-hero .ranking {
+  height: 120px;
+  width: 100%; }
 /**
  * #.# Common SCSS
  *
@@ -143,3 +130,42 @@
       .wp-block-portfolio-page-heading .page-heading__content h1 {
         font-size: 70px;
         margin: -120px 0 0; } }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-portfolio-work .work {
+  -ms-flex-align: start;
+      align-items: flex-start;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
+  .wp-block-portfolio-work .work__content {
+    margin-right: 30px;
+    padding-top: 30px;
+    width: calc(50% - 15px); }
+  .wp-block-portfolio-work .work__image {
+    margin-bottom: -240px;
+    position: relative;
+    width: calc(50% - 15px); }
+  .wp-block-portfolio-work .work__screenshot {
+    -webkit-mask: url(/wp-content/plugins/portfolio-blocks/src/work/assets/iphone-screen.svg);
+            mask: url(/wp-content/plugins/portfolio-blocks/src/work/assets/iphone-screen.svg);
+    -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+    position: absolute;
+    top: 5%;
+    left: 11.44%;
+    right: 11.44%;
+    bottom: 8.3%;
+    overflow: auto; }
+    .wp-block-portfolio-work .work__screenshot img {
+      width: 100%; }

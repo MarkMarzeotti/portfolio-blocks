@@ -1,0 +1,17 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-child-list-child-list {
+    margin: 0;
+}
+
+.child-list {
+
+    &__select-post-type {
+        opacity: .62;
+    }
+}
