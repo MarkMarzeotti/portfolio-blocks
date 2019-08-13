@@ -10,8 +10,6 @@ import axios from 'axios';
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { PanelBody, SelectControl } = wp.components;
-const { InspectorControls } = wp.editor;
 const { Component } = wp.element;
 
 /**
@@ -78,28 +76,11 @@ registerBlockType( 'portfolio-blocks/child-list', {
 					} );
 			}
 
-			return [
-				<InspectorControls key="1">
-					<PanelBody title={ __( 'Settings' ) }>
-						<SelectControl
-							label="Post Type"
-							value={ this.props.attributes.postType }
-							options={ this.state.postTypes }
-							onChange={ ( postType ) => {
-								this.props.setAttributes( { postType } );
-								if ( parseInt( postType ) !== 0 ) {
-									this.setState( { postsRetrieved: false } );
-								} else {
-									this.setState( { posts: '<p class="child-list__select-post-type">Select a post type to display...</p>' } );
-								}
-							} }
-						/>
-					</PanelBody>
-				</InspectorControls>,
-				<div className={ this.props.className } key="2">
+			return (
+				<div className={ this.props.className }>
 					<div className="child-list__posts" dangerouslySetInnerHTML={ { __html: this.state.posts } }></div>
-				</div>,
-			];
+				</div>
+			);
 		}
 	},
 	save() {

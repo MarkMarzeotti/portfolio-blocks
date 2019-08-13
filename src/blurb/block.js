@@ -23,7 +23,7 @@ const introHeadingToggle = function( props ) {
 			onClick: function() {
 				props.onChange( wp.richText.toggleFormat(
 					props.value,
-					{ type: 'portfolio/intro-heading' }
+					{ type: 'portfolio-blocks/intro-heading' }
 				) );
 			},
 			isActive: props.isActive,
@@ -40,13 +40,13 @@ const ConditionalButton = compose(
 	ifCondition( function( props ) {
 		return (
 			props.selectedBlock &&
-			props.selectedBlock.name === 'portfolio/blurb'
+			props.selectedBlock.name === 'portfolio-blocks/blurb'
 		);
 	} )
 )( introHeadingToggle );
 
 wp.richText.registerFormatType(
-	'portfolio/intro-heading', {
+	'portfolio-blocks/intro-heading', {
 		title: 'Intro heading',
 		tagName: 'span',
 		className: 'intro-heading',

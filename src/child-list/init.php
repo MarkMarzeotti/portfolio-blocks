@@ -89,7 +89,7 @@ function portfolio_blocks_render_child_list( $attributes ) {
 }
 
 /**
- * Register all dynamic Gutenberg blocks.
+ * Register Child List Gutenberg block.
  *
  * @since 1.0.0
  */

@@ -14,15 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Render Archive Content block on frontend.
+ * Render Hero block on frontend.
  *
  * @since 1.0.0
  *
  * @param array $attributes {
- *     @type string className The class defined in the Archive Content block
- *     @type string headline  The headline displayed in the Archive Content block
- *     @type string subhead   The subhead displayed in the Archive Content block
- *     @type string postType  The post type displayed in the Archive Content block
+ *     @type string className The class defined in the Hero block
+ *     @type string heading   The heading displayed in the Hero block
  * }
  */
 function portfolio_blocks_render_hero( $attributes, $content ) {
@@ -66,7 +64,7 @@ function portfolio_blocks_render_hero( $attributes, $content ) {
 }
 
 /**
- * Register all dynamic Gutenberg blocks.
+ * Register Hero Gutenberg block.
  *
  * @since 1.0.0
  */

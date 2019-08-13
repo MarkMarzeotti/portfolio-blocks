@@ -14,15 +14,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Render Archive Content block on frontend.
+ * Render Work block on frontend.
  *
  * @since 1.0.0
  *
  * @param array $attributes {
- *     @type string className The class defined in the Archive Content block
- *     @type string headline  The headline displayed in the Archive Content block
- *     @type string subhead   The subhead displayed in the Archive Content block
- *     @type string postType  The post type displayed in the Archive Content block
+ *     @type string className     The class defined in the Work block
+ *     @type string screenshotID  The screenshot ID displayed in the Work block
+ *     @type string screenshot    The screenshot displayed in the Work block
+ *     @type string screenshotAlt The alt text for the screenshot displayed in the Work block
  * }
  */
 function portfolio_blocks_render_work( $attributes, $content ) {
@@ -43,7 +43,7 @@ function portfolio_blocks_render_work( $attributes, $content ) {
 			</div>
 			<div class="work__image">
 				<div class="work__iphone">
-					<?php echo file_get_contents( plugin_dir_path( __FILE__ ) . 'assets/iphone-black.svg' ); ?>
+					<?php echo file_get_contents( plugins_url( 'assets/iphone-black.svg', __FILE__ ) ); ?>
 				</div>
 				<div class="work__screenshot">
 					<img src="<?php echo esc_url( $block_screenshot ); ?>" alt="<?php echo esc_attr( $block_screenshot_alt ); ?>" />
@@ -58,7 +58,7 @@ function portfolio_blocks_render_work( $attributes, $content ) {
 }
 
 /**
- * Register all dynamic Gutenberg blocks.
+ * Register Work Gutenberg block.
  *
  * @since 1.0.0
  */

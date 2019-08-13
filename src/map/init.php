@@ -14,15 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Render Archive Content block on frontend.
+ * Render Map block on frontend.
  *
  * @since 1.0.0
  *
  * @param array $attributes {
- *     @type string className The class defined in the Archive Content block
- *     @type string headline  The headline displayed in the Archive Content block
- *     @type string subhead   The subhead displayed in the Archive Content block
- *     @type string postType  The post type displayed in the Archive Content block
+ *     @type string className The class defined in the Map block
+ *     @type string address   The address displayed in the Map block
  * }
  */
 function portfolio_blocks_render_map( $attributes ) {
@@ -44,7 +42,7 @@ function portfolio_blocks_render_map( $attributes ) {
 }
 
 /**
- * Register all dynamic Gutenberg blocks.
+ * Register Map Gutenberg block.
  *
  * @since 1.0.0
  */

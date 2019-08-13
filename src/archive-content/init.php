@@ -19,10 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  *
  * @param array $attributes {
- *     @type string className The class defined in the Archive Content block
- *     @type string headline  The headline displayed in the Archive Content block
- *     @type string subhead   The subhead displayed in the Archive Content block
- *     @type string postType  The post type displayed in the Archive Content block
+ *     @type string className   The class defined in the Archive Content block
+ *     @type string postType    The post type the Archive Content block will display
+ *     @type string postDisplay The format the Archive Content block will display as
  * }
  */
 function portfolio_blocks_render_archive_content( $attributes ) {
@@ -123,7 +122,7 @@ function portfolio_blocks_render_archive_content( $attributes ) {
 }
 
 /**
- * Register all dynamic Gutenberg blocks.
+ * Register Archive Content Gutenberg block.
  *
  * @since 1.0.0
  */

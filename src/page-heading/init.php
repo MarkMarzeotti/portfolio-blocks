@@ -14,15 +14,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Render Archive Content block on frontend.
+ * Render Page Heading block on frontend.
  *
  * @since 1.0.0
  *
  * @param array $attributes {
- *     @type string className The class defined in the Archive Content block
- *     @type string headline  The headline displayed in the Archive Content block
- *     @type string subhead   The subhead displayed in the Archive Content block
- *     @type string postType  The post type displayed in the Archive Content block
+ *     @type string className         The class defined in the Page Heading block
+ *     @type string heading           The heading displayed in the Page Heading block
+ *     @type string headingBackground The text displayed behind the heading in the Page Heading block
  * }
  */
 function portfolio_blocks_render_page_heading( $attributes ) {
@@ -50,7 +49,7 @@ function portfolio_blocks_render_page_heading( $attributes ) {
 }
 
 /**
- * Register all dynamic Gutenberg blocks.
+ * Register Page Heading Gutenberg block.
  *
  * @since 1.0.0
  */
