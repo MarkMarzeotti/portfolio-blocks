@@ -35,17 +35,10 @@ const Rankings = <svg height="120" width="100%">
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'portfolio/hero', {
+registerBlockType( 'portfolio-blocks/hero', {
 	title: __( 'Hero' ),
 	icon: 'chart-line',
 	category: 'common',
-	attributes: {
-		heading: {
-			source: 'children',
-			selector: 'h1',
-			type: 'array',
-		},
-	},
 	keywords: [
 		__( 'hero' ),
 		__( 'content' ),
@@ -71,19 +64,7 @@ registerBlockType( 'portfolio/hero', {
 			</div>
 		);
 	},
-	save: function( props ) {
-		return (
-			<div className={ props.className }>
-				<div className="hero">
-					<div className="hero__content">
-						<RichText.Content tagName="h1" value={ props.attributes.heading } />
-						<InnerBlocks.Content />
-					</div>
-				</div>
-				<div className="ranking">
-					{ Rankings }
-				</div>
-			</div>
-		);
+	save: function() {
+		return <InnerBlocks.Content />;
 	},
 } );

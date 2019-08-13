@@ -10,11 +10,10 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-archive-content-archive-content {
+.wp-block-portfolio-blocks-archive-content {
   margin: 0; }
-
-.archive-content__select-post-type {
-  opacity: .62; }
+  .wp-block-portfolio-blocks-archive-content .archive-content__select-post-type {
+    opacity: .62; }
 /**
  * #.# Common SCSS
  *
@@ -27,7 +26,7 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-portfolio-blurb .background {
+.wp-block-portfolio-blocks-blurb .background {
   pointer-events: none;
   position: absolute;
   top: -14px;
@@ -47,11 +46,10 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-child-list-child-list {
+.wp-block-portfolio-blocks-child-list {
   margin: 0; }
-
-.child-list__select-post-type {
-  opacity: .62; }
+  .wp-block-portfolio-blocks-child-list .child-list__select-post-type {
+    opacity: .62; }
 /**
  * #.# Common SCSS
  *
@@ -64,11 +62,11 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-portfolio-hero .hero {
+.wp-block-portfolio-blocks-hero .hero {
   height: auto;
   min-height: auto; }
 
-.wp-block-portfolio-hero .ranking {
+.wp-block-portfolio-blocks-hero .ranking {
   margin-bottom: 0; }
 /**
  * #.# Common SCSS
@@ -94,7 +92,7 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-portfolio-page-heading .editor-rich-text h1 {
+.wp-block-portfolio-blocks-page-heading .editor-rich-text h1 {
   font-size: 70px;
   margin: -100px 0 0; }
 /**
@@ -109,14 +107,14 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-portfolio-work .work__image {
+.wp-block-portfolio-blocks-work .work__image {
   margin-bottom: 0;
   margin-top: 40px; }
-  .wp-block-portfolio-work .work__image .components-button {
+  .wp-block-portfolio-blocks-work .work__image .components-button {
     position: absolute;
     top: -40px;
     right: 0;
     left: 6%;
     margin: auto; }
-  .wp-block-portfolio-work .work__image__screenshot {
+  .wp-block-portfolio-blocks-work .work__image__screenshot {
     background-color: #F3F3F4; }

@@ -11,7 +11,7 @@ import axios from 'axios';
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const { PanelBody, SelectControl, TextControl } = wp.components;
-const { RichText, InspectorControls } = wp.editor;
+const { InspectorControls } = wp.editor;
 const { Component } = wp.element;
 
 /**
@@ -22,7 +22,7 @@ const { Component } = wp.element;
  * @param  {Object}   settings Block settings.
  * @return {?WPBlock}          The block, if it has been successfully registered; otherwise `undefined`.
  */
-registerBlockType( 'archive-content/archive-content', {
+registerBlockType( 'portfolio-blocks/archive-content', {
 	title: __( 'Archive Content' ),
 	icon: 'format-aside',
 	category: 'common',
@@ -111,20 +111,6 @@ registerBlockType( 'archive-content/archive-content', {
 					</PanelBody>
 				</InspectorControls>,
 				<div className={ this.props.className } key="2">
-					<RichText
-						tagName="h2"
-						className="archive-content__headline"
-						keepPlaceholderOnFocus={ true }
-						onChange={ ( headline ) => this.props.setAttributes( { headline } ) }
-						placeholder={ __( 'Add a headline for the archive content' ) }
-						value={ this.props.attributes.headline } />
-					<RichText
-						tagName="p"
-						className="archive-content__subhead"
-						keepPlaceholderOnFocus={ true }
-						onChange={ ( subhead ) => this.props.setAttributes( { subhead } ) }
-						placeholder={ __( 'Add a subhead for the archive content' ) }
-						value={ this.props.attributes.subhead } />
 					<div className="archive-content__posts" dangerouslySetInnerHTML={ { __html: this.state.posts } }></div>
 				</div>,
 			];

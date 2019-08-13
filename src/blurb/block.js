@@ -63,20 +63,10 @@ wp.richText.registerFormatType(
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'portfolio/blurb', {
+registerBlockType( 'portfolio-blocks/blurb', {
 	title: __( 'Blurb' ),
 	icon: 'align-none',
 	category: 'common',
-	attributes: {
-		heading: {
-			source: 'children',
-			selector: 'h2',
-			type: 'array',
-		},
-		color: {
-			type: 'string',
-		},
-	},
 	keywords: [
 		__( 'blurb' ),
 		__( 'content' ),
@@ -121,17 +111,7 @@ registerBlockType( 'portfolio/blurb', {
 			</div>,
 		];
 	},
-	save: function( props ) {
-		return (
-			<div className={ props.className } style={ { backgroundColor: props.attributes.color } }>
-				<div className="blurb">
-					<div className="blurb__content">
-						<RichText.Content tagName="h2" value={ props.attributes.heading } />
-						<hr />
-						<InnerBlocks.Content />
-					</div>
-				</div>
-			</div>
-		);
+	save: function() {
+		return <InnerBlocks.Content />;
 	},
 } );

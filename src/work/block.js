@@ -245,21 +245,10 @@ const ALLOWED_MEDIA_TYPES = [ 'image' ];
  * @param  {Object}   settings Block settings.
  * @return {?WPBlock}
  */
-registerBlockType( 'portfolio/work', {
+registerBlockType( 'portfolio-blocks/work', {
 	title: __( 'Work' ),
 	icon: 'align-none',
 	category: 'common',
-	attributes: {
-		screenshotID: {
-			type: 'integer',
-		},
-		screenshot: {
-			type: 'string',
-		},
-		screenshotAlt: {
-			type: 'string',
-		},
-	},
 	keywords: [
 		__( 'work' ),
 		__( 'content' ),
@@ -311,21 +300,7 @@ registerBlockType( 'portfolio/work', {
 			</div>
 		);
 	},
-	save: function( props ) {
-		return (
-			<div className={ props.className }>
-				<div className="work">
-					<div className="work__content">
-						<InnerBlocks.Content />
-					</div>
-					<div className="work__image">
-						<div className="work__iphone" dangerouslySetInnerHTML={ { __html: blackiPhone } } />
-						<div className="work__screenshot">
-							<img src={ props.attributes.screenshot } alt={ props.attributes.screenshotAlt } />
-						</div>
-					</div>
-				</div>
-			</div>
-		);
+	save: function() {
+		return <InnerBlocks.Content />;
 	},
 } );

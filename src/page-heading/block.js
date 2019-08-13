@@ -20,20 +20,10 @@ const { PanelBody, TextControl } = wp.components;
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'portfolio/page-heading', {
+registerBlockType( 'portfolio-blocks/page-heading', {
 	title: __( 'Page Heading' ),
 	icon: 'align-none',
 	category: 'common',
-	attributes: {
-		heading: {
-			source: 'children',
-			selector: 'h1',
-			type: 'array',
-		},
-		headingBackground: {
-			type: 'string',
-		},
-	},
 	keywords: [
 		__( 'page' ),
 		__( 'heading' ),
@@ -66,16 +56,7 @@ registerBlockType( 'portfolio/page-heading', {
 			</div>,
 		];
 	},
-	save: function( props ) {
-		return (
-			<div className={ props.className }>
-				<div className="page-heading">
-					<div className="page-heading__content">
-						<span>{ props.attributes.headingBackground }</span>
-						<RichText.Content tagName="h1" value={ props.attributes.heading } />
-					</div>
-				</div>
-			</div>
-		);
+	save() {
+		return null;
 	},
 } );

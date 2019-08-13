@@ -1,8 +1,8 @@
-<svg width="712px" height="1382px" viewBox="0 0 712 1382" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 752 1399" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
-        <filter x="-25.0%" y="-12.6%" width="150.0%" height="125.1%" filterUnits="objectBoundingBox" id="filter-1">
-            <feOffset dx="5" dy="50" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+        <filter x="-21.9%" y="-11.0%" width="143.9%" height="122.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="20" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="25" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
             <feMerge>
                 <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
@@ -55,7 +55,7 @@
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="iPhone-X-Mockup-Freebie" transform="translate(-1449.000000, -203.000000)">
+        <g id="iPhone-X-Mockup-Freebie" transform="translate(-1424.000000, -175.000000)">
             <g id="iPhone-X-White" filter="url(#filter-1)" transform="translate(1474.000000, 205.000000)">
                 <g id="iPhone-X-Body-White">
                     <g>

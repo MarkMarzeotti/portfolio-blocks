@@ -9,7 +9,7 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-archive-content-archive-content {
+.wp-block-portfolio-blocks-archive-content {
   margin: 0 auto; }
 /**
  * #.# Common SCSS
@@ -22,22 +22,22 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-portfolio-blurb .blurb__content {
+.wp-block-portfolio-blocks-blurb .blurb__content {
   width: 100%; }
-  .wp-block-portfolio-blurb .blurb__content h2 .intro-heading {
+  .wp-block-portfolio-blocks-blurb .blurb__content h2 .intro-heading {
     margin-bottom: 12px;
     text-transform: uppercase; }
-  .wp-block-portfolio-blurb .blurb__content p {
+  .wp-block-portfolio-blocks-blurb .blurb__content p {
     margin-bottom: 20px; }
-    .wp-block-portfolio-blurb .blurb__content p:last-of-type {
+    .wp-block-portfolio-blocks-blurb .blurb__content p:last-of-type {
       margin-bottom: 50px; }
-      .wp-block-portfolio-blurb .blurb__content p:last-of-type:last-child {
+      .wp-block-portfolio-blocks-blurb .blurb__content p:last-of-type:last-child {
         margin-bottom: 0; }
-  .wp-block-portfolio-blurb .blurb__content blockquote p {
+  .wp-block-portfolio-blocks-blurb .blurb__content blockquote p {
     margin-bottom: 30px; }
-    .wp-block-portfolio-blurb .blurb__content blockquote p:last-of-type {
+    .wp-block-portfolio-blocks-blurb .blurb__content blockquote p:last-of-type {
       margin-bottom: 30px; }
-      .wp-block-portfolio-blurb .blurb__content blockquote p:last-of-type:last-child {
+      .wp-block-portfolio-blocks-blurb .blurb__content blockquote p:last-of-type:last-child {
         margin-bottom: 30px; }
 /**
  * #.# Common SCSS
@@ -50,7 +50,7 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-child-list-child-list {
+.wp-block-portfolio-blocks-child-list {
   margin: 0 auto; }
 /**
  * #.# Common SCSS
@@ -63,7 +63,7 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-portfolio-hero .hero {
+.wp-block-portfolio-blocks-hero .hero {
   -ms-flex-align: center;
       align-items: center;
   display: -ms-flexbox;
@@ -74,15 +74,15 @@
   width: 100%;
   z-index: 1; }
   @media (min-width: 750px) {
-    .wp-block-portfolio-hero .hero {
+    .wp-block-portfolio-blocks-hero .hero {
       height: calc(100vh - 200px);
       min-height: 400px; } }
-  .wp-block-portfolio-hero .hero .hero__content {
+  .wp-block-portfolio-blocks-hero .hero .hero__content {
     padding: 40px 0; }
-    .wp-block-portfolio-hero .hero .hero__content p:last-of-type {
+    .wp-block-portfolio-blocks-hero .hero .hero__content p:last-of-type {
       margin-bottom: 50px; }
 
-.wp-block-portfolio-hero .ranking {
+.wp-block-portfolio-blocks-hero .ranking {
   height: 120px;
   width: 100%; }
 /**
@@ -96,7 +96,7 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-portfolio-map .map {
+.wp-block-portfolio-blocks-map .map {
   height: 400px; }
 /**
  * #.# Common SCSS
@@ -109,10 +109,10 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-portfolio-page-heading .page-heading__content {
+.wp-block-portfolio-blocks-page-heading .page-heading__content {
   text-align: center;
   width: 100%; }
-  .wp-block-portfolio-page-heading .page-heading__content span {
+  .wp-block-portfolio-blocks-page-heading .page-heading__content span {
     font-size: 70px;
     font-weight: 700;
     line-height: 1.4;
@@ -120,14 +120,14 @@
     opacity: .05;
     pointer-events: none; }
     @media (min-width: 750px) {
-      .wp-block-portfolio-page-heading .page-heading__content span {
+      .wp-block-portfolio-blocks-page-heading .page-heading__content span {
         font-size: 160px; } }
-  .wp-block-portfolio-page-heading .page-heading__content h1 {
+  .wp-block-portfolio-blocks-page-heading .page-heading__content h1 {
     font-size: 50px;
     line-height: 1.4;
     margin: -55px 0 0; }
     @media (min-width: 750px) {
-      .wp-block-portfolio-page-heading .page-heading__content h1 {
+      .wp-block-portfolio-blocks-page-heading .page-heading__content h1 {
         font-size: 70px;
         margin: -120px 0 0; } }
 /**
@@ -141,22 +141,22 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-portfolio-work .work {
+.wp-block-portfolio-blocks-work .work {
   -ms-flex-align: start;
       align-items: flex-start;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap; }
-  .wp-block-portfolio-work .work__content {
+  .wp-block-portfolio-blocks-work .work__content {
     margin-right: 30px;
     padding-top: 30px;
     width: calc(50% - 15px); }
-  .wp-block-portfolio-work .work__image {
+  .wp-block-portfolio-blocks-work .work__image {
     margin-bottom: -240px;
     position: relative;
     width: calc(50% - 15px); }
-  .wp-block-portfolio-work .work__screenshot {
+  .wp-block-portfolio-blocks-work .work__screenshot {
     -webkit-mask: url(/wp-content/plugins/portfolio-blocks/src/work/assets/iphone-screen.svg);
             mask: url(/wp-content/plugins/portfolio-blocks/src/work/assets/iphone-screen.svg);
     -webkit-mask-size: 100% 100%;
@@ -167,5 +167,5 @@
     right: 11.44%;
     bottom: 8.3%;
     overflow: auto; }
-    .wp-block-portfolio-work .work__screenshot img {
+    .wp-block-portfolio-blocks-work .work__screenshot img {
       width: 100%; }

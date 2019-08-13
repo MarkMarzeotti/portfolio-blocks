@@ -5,13 +5,13 @@
  * which makes it higher in priority.
  */
 
-.wp-block-child-list-child-list {
+.wp-block-portfolio-blocks-child-list {
     margin: 0;
-}
 
-.child-list {
-
-    &__select-post-type {
-        opacity: .62;
+    .child-list {
+    
+        &__select-post-type {
+            opacity: .62;
+        }
     }
 }

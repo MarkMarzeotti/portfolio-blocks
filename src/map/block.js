@@ -23,7 +23,7 @@ const { registerBlockType } = wp.blocks;
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'portfolio/map', {
+registerBlockType( 'portfolio-blocks/map', {
 	title: __( 'Map' ),
 	icon: 'location',
 	category: 'common',
@@ -222,11 +222,7 @@ registerBlockType( 'portfolio/map', {
 			</div>
 		);
 	},
-	save: function( props ) {
-		return (
-			<div className={ props.className }>
-				<div id="map" className="map"></div>
-			</div>
-		);
+	save() {
+		return null;
 	},
 } );
