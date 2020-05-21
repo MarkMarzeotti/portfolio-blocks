@@ -1,6 +1,120 @@
-.wp-block-portfolio-blocks-archive-content{margin:0}.wp-block-portfolio-blocks-archive-content .archive-content__select-post-type{opacity:.62}
-.wp-block-portfolio-blocks-blurb .background{pointer-events:none;position:absolute;top:-14px;right:-100vw;bottom:-14px;left:-100vw;z-index:0}
-.wp-block-portfolio-blocks-child-list{margin:0}.wp-block-portfolio-blocks-child-list .child-list__select-post-type{opacity:.62}
-.wp-block-portfolio-blocks-hero .hero{height:auto;min-height:auto}.wp-block-portfolio-blocks-hero .ranking{margin-bottom:0}
-.wp-block-portfolio-blocks-page-heading .editor-rich-text h1{font-size:70px;margin:-100px 0 0}
-.wp-block-portfolio-blocks-work .work__image{margin-bottom:0;margin-top:40px}.wp-block-portfolio-blocks-work .work__image .components-button{position:absolute;top:-40px;right:0;left:6%;margin:auto}.wp-block-portfolio-blocks-work .work__image__screenshot{background-color:#F3F3F4}
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-portfolio-blocks-archive-content {
+  margin: 0; }
+  .wp-block-portfolio-blocks-archive-content .archive-content__select-post-type {
+    opacity: .62; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-portfolio-blocks-blurb .background {
+  pointer-events: none;
+  position: absolute;
+  top: -14px;
+  right: -100vw;
+  bottom: -14px;
+  left: -100vw;
+  z-index: 0; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-portfolio-blocks-child-list {
+  margin: 0; }
+  .wp-block-portfolio-blocks-child-list .child-list__select-post-type {
+    opacity: .62; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-portfolio-blocks-hero .hero {
+  height: auto;
+  min-height: auto; }
+
+.wp-block-portfolio-blocks-hero .ranking {
+  margin-bottom: 0; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-portfolio-blocks-page-heading .editor-rich-text h1 {
+  font-size: 70px;
+  margin: -100px 0 0; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-portfolio-blocks-work .work__image {
+  margin-bottom: 0;
+  margin-top: 40px; }
+  .wp-block-portfolio-blocks-work .work__image .components-button {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    left: 6%;
+    margin: auto; }
+  .wp-block-portfolio-blocks-work .work__image__screenshot {
+    background-color: #F3F3F4; }
