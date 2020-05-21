@@ -57,7 +57,7 @@ function portfolio_blocks_render_archive_content( $attributes ) {
 						 * Filter the post link.
 						 *
 						 * @since 1.0.0
-						 * 
+						 *
 						 * @param @type string $post_permalink This post permalink
 						 */
 						$post_permalink = apply_filters( 'archive_content_post_link', $post_permalink );
@@ -75,17 +75,18 @@ function portfolio_blocks_render_archive_content( $attributes ) {
 							<?php endif; ?>
 							<div class="archive-content__content">
 								<h2 class="h3"><a href="<?php echo esc_url( $post_permalink ); ?>"<?php echo $target; ?>><?php the_title(); ?></a></h2>
-								<?php 
+								<?php
 								/**
 								 * Filter to display content after the post title.
 								 *
 								 * @since 1.0.0
-								 * 
+								 *
 								 * @param @type object $post This post object
 								 */
-								echo apply_filters( 'archive_content_after_title', $post );
+								$content_after_title = apply_filters( 'archive_content_after_title', $post );
+								echo wp_kses( $content_after_title, 'post' );
 
-								the_excerpt(); 
+								the_excerpt();
 
 								$button_text = $attributes['buttonOverride'] ? $attributes['buttonOverride'] : 'View ' . get_the_title();
 								$button_text = str_replace( '%title%', get_the_title(), $button_text );

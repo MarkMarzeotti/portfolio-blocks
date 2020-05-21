@@ -48,41 +48,13 @@ function portfolio_blocks_admin_block_assets() { // phpcs:ignore
 add_action( 'enqueue_block_editor_assets', 'portfolio_blocks_admin_block_assets' );
 
 function portfolio_blocks_block_assets() { // phpcs:ignore
+	$deps = is_admin() ? array( 'wp-editor' ) : false;
 	// Register block styles for both frontend + backend.
 	wp_enqueue_style(
 		'portfolio_blocks-style-css',
 		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ),
-		array( 'wp-editor' )
+		$deps
 		// null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' )
 	);
 }
 add_action( 'enqueue_block_assets', 'portfolio_blocks_block_assets' );
-
-/**
- * Enqueue Gutenberg block assets for frontend.
- *
- * Assets enqueued:
- * 1. Google Maps.
- * 2. Google Maps Loader.
- * 
- * @since 1.0.0
- */
-function portfolio_block_frontend_assets() {
-	wp_register_script(
-		'google-maps',
-		'https://maps.googleapis.com/maps/api/js?key=AIzaSyCb0NahCEnubhm0zEaBcJKF4nPgrSZ3IQM&callback=initMap',
-		array( 'google-maps-loader' ),
-		null,
-		true
-	);
-	wp_register_script(
-		'google-maps-loader',
-		plugins_url( 'src/map/common.js', dirname( __FILE__ ) ),
-		array(),
-		null,
-		true
-	);
-	wp_enqueue_script( 'google-maps-loader' );
-	wp_enqueue_script( 'google-maps' );
-}
-add_action( 'wp_enqueue_scripts', 'portfolio_block_frontend_assets' );
